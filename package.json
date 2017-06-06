@@ -1,7 +1,7 @@
 {
   "name": "argv-to-list",
   "version": "0.0.0",
-  "main": "index.js",
+  "bin": "main.js",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "devDependencies": {
     "standard": "10.0.2"

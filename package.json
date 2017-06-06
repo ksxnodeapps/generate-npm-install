@@ -1,4 +1,5 @@
 {
+  "name": "argv-to-list",
   "version": "0.0.0",
   "main": "index.js",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
@@ -10,5 +11,23 @@
     "clean": "bash 'sh/clean.sh'",
     "fix": "bash 'sh/fix.sh'",
     "test": "bash 'sh/test.sh'"
-  }
+  },
+  "description": "Print each command-line argument as a line",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksxnodeapps/argv-to-list.git"
+  },
+  "keywords": [
+    "args",
+    "argv",
+    "list"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ksxnodeapps/argv-to-list/issues"
+  },
+  "homepage": "https://github.com/ksxnodeapps/argv-to-list#readme"
 }

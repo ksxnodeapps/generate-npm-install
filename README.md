@@ -2,7 +2,19 @@
 
 Print each command-line argument as a line
 
-## Basic
+## Requirements
+
+* Node.js ≥ 6.0.0, and npm
+
+## Installation
+
+```bash
+npm install --global argv-to-list
+```
+
+## Usage
+
+### Basic
 
 ```bash
 argv-to-list first second 'This argument contains spaces'
@@ -16,9 +28,9 @@ second
 This argument contains spaces
 ```
 
-## Advanced
+### Advanced
 
-### Chunks of data
+#### Chunks of data
 
 Each argument is pushed to stdout seperately, that means there are each chunk of stdout for every one of them.
 

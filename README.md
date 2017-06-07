@@ -53,5 +53,5 @@ This is the output:
 #### As a module
 
 ```typescript
-argvToList(input = process.argv, begin = 2, end?: int): void
+argvToList(input = process.argv, begin = 2, end?: number): void
 ```

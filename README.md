@@ -52,8 +52,6 @@ This is the output:
 
 #### As a module
 
-**Syntax:**
-
 ```typescript
 argvToList(input = process.argv, begin = 2, end?: int): void
 ```

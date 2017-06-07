@@ -49,3 +49,11 @@ This is the output:
 { chunk: 'abc\ndef\nghi\njkl\n' }
 { chunk: 'foo\nbar\n' }
 ```
+
+#### As a module
+
+**Syntax:**
+
+```typescript
+argvToList(input = process.argv, begin = 2, end?: int): void
+```

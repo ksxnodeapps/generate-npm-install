@@ -39,20 +39,13 @@ Each argument is pushed to stdout seperately, that means there are each chunk of
 ```javascript
 const arguments = ['abc\ndef\nghi\njkl', 'foo\nbar']
 const {stdout} = require('child_process').spawn('argv-to-list', arguments)
-const print = chunk =>
-  console.log('chunk:\n' + chunk.split('\n').map(x => '- ' + x))
+const print = chunk => console.log({chunk: String(chunk)})
 stdout.on('data', print)
 ```
 
 This is the output:
 
 ```text
-chunk:
-- abc
-- def
-- ghi
-- jkl
-chunk:
-- foo
-- bar
+{ chunk: 'abc\ndef\nghi\njkl\n' }
+{ chunk: 'foo\nbar\n' }
 ```

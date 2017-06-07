@@ -1,6 +1,7 @@
 {
   "name": "argv-to-list",
   "version": "1.0.1",
+  "main": "index.js",
   "bin": "index.js",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "preferGlobal": true,

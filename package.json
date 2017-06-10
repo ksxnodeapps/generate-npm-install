@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "bin": {
-    "argv-to-list": "index.js"
+    "generate-npm-install": "index.js"
   },
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "preferGlobal": true,

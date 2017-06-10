@@ -1,6 +1,6 @@
 {
   "name": "generate-npm-install",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "index.js",
   "bin": {
     "argv-to-list": "index.js"

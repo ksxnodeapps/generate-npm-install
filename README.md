@@ -57,7 +57,18 @@ generateNpmInstall(options: {
       TAG?: string,
       NPM_TAG: string = TAG
     }
-  },
+  } = require('process'),
+
+  fs: {
+    readFileSync: (filename: string) => {
+      toString: (encoding: string = 'utf8') => string
+    }
+  } = require('fs'),
+
+  path: {
+    resolve: (...args: string[]) => string
+  } = require('path'),
+
   directory: string = process.cwd()
 }): string
 ```
@@ -66,5 +77,9 @@ generateNpmInstall(options: {
 * `options.process.env`: object, default to `{}`
 * `options.process.env.NPM_TAG`: string, default to `options.process.env.TAG`
 * `options.process.env.TAG`: string, default to `undefined`
+* `options.fs`: object, default to `fs`
+* `options.fs.readFileSync`: function
+* `options.path`: object, default to `path`
+* `options.path.resolve`: function
 * `options.directory`: string, path to a directory, default to `options.process.cwd()`
 * Returns a string contains UNIX shell script

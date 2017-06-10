@@ -1,11 +1,9 @@
 #! /usr/bin/env node
-function main (options = {}) {
-  const {
-    process = require('process'),
-    fs: {readFileSync} = require('fs'),
-    path: {resolve} = require('path')
-  } = options
-
+function main ({
+  process = require('process'),
+  fs: {readFileSync} = require('fs'),
+  path: {resolve} = require('path')
+} = {}) {
   const {
     env: {
       TAG,
@@ -28,7 +26,7 @@ function main (options = {}) {
       ['bundleDependencies', 'save-bundle'],
       ['optionalDependencies', 'save-optional'],
       ['devDependencies', 'save-dev']
-    ]
+  ]
       .map(([name, save]) => [info[name], save, name])
       .filter(pair => pair[0])
       .map(([object, save, name]) => [Object.getOwnPropertyNames(object), save, name])

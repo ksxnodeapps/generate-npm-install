@@ -1,8 +1,10 @@
 {
-  "name": "argv-to-list",
-  "version": "1.0.4",
+  "name": "generate-npm-install",
+  "version": "0.0.0",
   "main": "index.js",
-  "bin": "index.js",
+  "bin": {
+    "argv-to-list": "index.js"
+  },
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "preferGlobal": true,
   "devDependencies": {
@@ -14,22 +16,22 @@
     "fix": "bash 'sh/fix.sh'",
     "test": "bash 'sh/test.sh'"
   },
-  "description": "Print each command-line argument as a line",
+  "description": "Generate npm install commands base on package.json",
   "directories": {
     "test": "test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ksxnodeapps/argv-to-list.git"
+    "url": "git+https://github.com/ksxnodeapps/generate-npm-install.git"
   },
   "keywords": [
-    "args",
-    "argv",
-    "list"
+    "generate-shell-commands",
+    "npm-install",
+    "packages"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ksxnodeapps/argv-to-list/issues"
+    "url": "https://github.com/ksxnodeapps/generate-npm-install/issues"
   },
-  "homepage": "https://github.com/ksxnodeapps/argv-to-list#readme"
+  "homepage": "https://github.com/ksxnodeapps/generate-npm-install#readme"
 }

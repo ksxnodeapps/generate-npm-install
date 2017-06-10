@@ -2,7 +2,8 @@
 function main ({
   process = require('process'),
   fs: {readFileSync} = require('fs'),
-  path: {resolve} = require('path')
+  path: {resolve} = require('path'),
+  directory
 } = {}) {
   const {
     env: {
@@ -13,7 +14,7 @@ function main ({
     cwd
   } = process
 
-  const wdir = process.directory || argv[2] || cwd()
+  const wdir = directory || argv[2] || cwd()
 
   const info = JSON.parse(
     readFileSync(

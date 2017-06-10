@@ -1,57 +1,70 @@
-# argv-to-list
+# generate-npm-install
 
-Print each command-line argument as a line
+Generate npm install commands base on package.json
 
 ## Requirements
 
 * Node.js ≥ 6.0.0, and npm
+* UNIX-like shell, e.g. sh, bash, zsh
 
 ## Installation
 
 ```bash
-npm install --global argv-to-list
+npm install --global generate-npm-install
 ```
 
 ## Usage
 
-### Basic
+### Command-line
 
-```bash
-argv-to-list first second 'This argument contains spaces'
+This will generate `npm install --save-{prod,bundle,optional,dev}` commands base on `package.json` in working directory
+
+```sh
+generate-npm-install # output contains: npm install --save... package1 package2 ...
+NPM_TAG=latest generate-npm-install # output contains: npm install --save... package1@latest package2@latest ...
 ```
 
-**Output:** The following text would be printed to terminal screen
+This will generate `npm install` commands for `/path/to/directory/package.json`
 
-```text
-first
-second
-This argument contains spaces
+```sh
+generate-npm-install /path/to/directory
+NPM_TAG=latest generate-npm-install /path/to/directory
 ```
 
-### Advanced
+This will execute generated `npm install` commands
 
-#### Chunks of data
+```sh
+generate-npm-install | sh
+NPM_TAG=latest generate-npm-install | sh
+generate-npm-install /path/to/directory | sh
+NPM_TAG=latest generate-npm-install /path/to/directory | sh
+```
 
-Each argument is pushed to stdout seperately, that means there are each chunk of stdout for every one of them.
+### JavaScript APIs
 
-**Example:**
+#### Import module
 
 ```javascript
-const arguments = ['abc\ndef\nghi\njkl', 'foo\nbar']
-const {stdout} = require('child_process').spawn('argv-to-list', arguments)
-const print = chunk => console.log({chunk: String(chunk)})
-stdout.on('data', print)
+const generateNpmInstall = require('generate-npm-install')
 ```
 
-This is the output:
-
-```text
-{ chunk: 'abc\ndef\nghi\njkl\n' }
-{ chunk: 'foo\nbar\n' }
-```
-
-#### As a module
+#### Function Usage
 
 ```typescript
-argvToList(input = process.argv, begin = 2, end?: number): void
+generateNpmInstall(options: {
+  process: {
+    env: {
+      TAG?: string,
+      NPM_TAG: string = TAG
+    }
+  },
+  directory: string = process.cwd()
+}): string
 ```
+
+* `options.process`: object, default to `process`
+* `options.process.env`: object, default to `{}`
+* `options.process.env.NPM_TAG`: string, default to `options.process.env.TAG`
+* `options.process.env.TAG`: string, default to `undefined`
+* `options.directory`: string, path to a directory, default to `options.process.cwd()`
+* Returns a string contains UNIX shell script

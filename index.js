@@ -37,14 +37,14 @@ function main ({
       )
       .filter(([{length}]) => length)
       .map(([packages, save, name]) => [
-        `cd ${wdir} && npm install --${save} ${packages.join(' ')}`,
+        `npm install --${save} ${packages.join(' ')}`,
         name,
         packages.length
       ])
       .map(([command, name, count]) => [
         `echo '[INFO] ${count} ${name}'`,
         'echo [COMMAND] ' + command,
-        command,
+        `cd '${wdir}' && ${command}`,
         'echo "[STATUS] $?"',
         '\n'
       ])

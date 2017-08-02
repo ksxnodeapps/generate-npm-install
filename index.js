@@ -32,7 +32,12 @@ function main ({
     .filter(pair => pair[0])
     .map(([object, save, name]) => [Object.getOwnPropertyNames(object), save, name])
     .map(NPM_TAG
-      ? ([packages, ...rest]) => [packages.map(pkgname => pkgname + '@' + NPM_TAG), ...rest]
+      ? ([packages, ...rest]) => [
+        packages.map(pkgname =>
+          pkgname.includes('@') ? pkgname : pkgname + '@' + NPM_TAG
+        ),
+        ...rest
+      ]
       : x => x
     )
     .filter(([{length}]) => length)

@@ -9,7 +9,7 @@ function main ({
     env: {
       TAG,
       NPM_TAG = TAG,
-      USE_YARN
+      USE_YARN = 'false'
     },
     argv,
     cwd
@@ -23,7 +23,7 @@ function main ({
     ).toString('utf8')
   )
 
-  const {svmap, mkcmd} = USE_YARN === 'true'
+  const {svmap, mkcmd} = String(USE_YARN) === 'true'
     ? {
       svmap: {
         dependencies: null,

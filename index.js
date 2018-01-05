@@ -8,7 +8,8 @@ function main ({
   const {
     env: {
       TAG,
-      NPM_TAG = TAG
+      NPM_TAG = TAG,
+      USE_YARN
     },
     argv,
     cwd
@@ -22,12 +23,29 @@ function main ({
     ).toString('utf8')
   )
 
-  return [
-    ['dependencies', 'save-prod'],
-    ['bundleDependencies', 'save-bundle'],
-    ['optionalDependencies', 'save-optional'],
-    ['devDependencies', 'save-dev']
-  ]
+  const {svmap, mkcmd} = USE_YARN === 'true'
+    ? {
+      svmap: {
+        dependencies: null,
+        bundleDependencies: 'bundle',
+        optionalDependencies: 'optional',
+        devDependencies: 'dev'
+      },
+      mkcmd: (save, list) =>
+        `yarn add ${save ? `--${save}` : ''} ${list}`
+    }
+    : {
+      svmap: {
+        dependencies: 'prod',
+        bundleDependencies: 'bundle',
+        optionalDependencies: 'optional',
+        devDependencies: 'dev'
+      },
+      mkcmd: (save, list) =>
+        `npm install --save-${save} ${list}`
+    }
+
+  return Object.entries(svmap)
     .map(([name, save]) => [info[name], save, name])
     .filter(pair => pair[0])
     .map(([object, save, name]) => [Object.getOwnPropertyNames(object), save, name])
@@ -42,7 +60,7 @@ function main ({
     )
     .filter(([{length}]) => length)
     .map(([packages, save, name]) => [
-      `npm install --${save} ${packages.join(' ')}`,
+      mkcmd(save, packages.join(' ')),
       name,
       packages.length
     ])

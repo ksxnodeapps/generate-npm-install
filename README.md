@@ -1,6 +1,6 @@
 # generate-npm-install
 
-Generate npm install commands base on package.json
+Generate npm/yarn install commands base on package.json
 
 ## Requirements
 
@@ -17,11 +17,12 @@ npm install --global generate-npm-install
 
 ### Command-line
 
-This will generate `npm install --save-{prod,bundle,optional,dev}` commands base on `package.json` in working directory
+This will generate `npm install --save-{prod,bundle,optional,dev}` or `yarn add {,--optional,--dev}` commands base on `package.json` in working directory
 
 ```sh
 generate-npm-install # output contains: npm install --save... package1 package2 ...
 NPM_TAG=latest generate-npm-install # output contains: npm install --save... package1@latest package2@latest ...
+USE_YARN=true generate-npm-install # output contains: yarn add ...
 ```
 
 This will generate `npm install` commands for `/path/to/directory/package.json`
@@ -55,7 +56,8 @@ generateNpmInstall(options: {
   process: {
     env: {
       TAG?: string,
-      NPM_TAG: string = TAG
+      NPM_TAG: string = TAG,
+      USE_YARN: string = 'false'
     }
   } = require('process'),
 
@@ -77,6 +79,7 @@ generateNpmInstall(options: {
 * `options.process.env`: object, default to `{}`
 * `options.process.env.NPM_TAG`: string, default to `options.process.env.TAG`
 * `options.process.env.TAG`: string, default to `undefined`
+* `options.process.env.USE_YARN`: string, default to `'false'`
 * `options.fs`: object, default to `fs`
 * `options.fs.readFileSync`: function
 * `options.path`: object, default to `path`

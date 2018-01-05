@@ -10,6 +10,9 @@
   "devDependencies": {
     "standard": "^10.0.2"
   },
+  "engines": {
+    "node": ">= 9.0.0"
+  },
   "scripts": {
     "remake-package-json": "node sh/remake-package-json",
     "clean": "bash 'sh/clean.sh'",

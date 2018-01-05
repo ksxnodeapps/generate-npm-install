@@ -3,7 +3,8 @@
   "version": "2.0.0",
   "main": "index.js",
   "bin": {
-    "generate-npm-install": "index.js"
+    "generate-npm-install": "index.js",
+    "generate-yarn-install": "yarn.js"
   },
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "preferGlobal": true,

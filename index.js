@@ -27,7 +27,6 @@ function main ({
     ? {
       svmap: {
         dependencies: null,
-        bundleDependencies: 'bundle',
         optionalDependencies: 'optional',
         devDependencies: 'dev'
       },

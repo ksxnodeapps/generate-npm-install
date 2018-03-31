@@ -9,6 +9,7 @@ function main ({
     env: {
       TAG,
       NPM_TAG = TAG,
+      USE_PNPM = 'false',
       USE_YARN = 'false'
     },
     argv,
@@ -40,8 +41,12 @@ function main ({
         optionalDependencies: 'optional',
         devDependencies: 'dev'
       },
-      mkcmd: (save, list) =>
-        `npm install --save-${save} ${list}`
+      mkcmd: (() => {
+        const npm = USE_PNPM === 'true' ? 'pnpm' : 'npm'
+        const mkcmd = (save, list) =>
+          `${npm} install --save-${save} ${list}`
+        return mkcmd
+      })()
     }
 
   return Object.entries(svmap)

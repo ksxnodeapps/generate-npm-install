@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 'use strict'
 
-const {stdout, stderr, env, exit} = require('process')
+const {env, exit} = require('process')
 const {spawn} = require('child_process')
 
 const child = spawn('node', [require.resolve('./index.js')], {

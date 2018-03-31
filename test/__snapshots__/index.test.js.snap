@@ -1,0 +1,374 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot 1`] = `
+"
+- case:
+    program: {}
+    tag: {}
+  result:
+    status: 0
+    signal: null
+    error: null
+    stdout: >+
+      echo '[INFO] 2 dependencies'
+
+      echo [COMMAND] npm install --save-prod hypothetical-package-0
+      hypothetical-package-1
+
+      npm install --save-prod hypothetical-package-0 hypothetical-package-1
+
+      echo \\"[STATUS] $?\\"
+
+
+      echo '[INFO] 2 optionalDependencies'
+
+      echo [COMMAND] npm install --save-optional hypothetical-package-4
+      hypothetical-package-5
+
+      npm install --save-optional hypothetical-package-4 hypothetical-package-5
+
+      echo \\"[STATUS] $?\\"
+
+
+      echo '[INFO] 2 devDependencies'
+
+      echo [COMMAND] npm install --save-dev hypothetical-package-2
+      hypothetical-package-3
+
+      npm install --save-dev hypothetical-package-2 hypothetical-package-3
+
+      echo \\"[STATUS] $?\\"
+
+    stderr: ((Empty))
+- case:
+    program: {}
+    tag:
+      TAG: latest
+  result:
+    status: 0
+    signal: null
+    error: null
+    stdout: >+
+      echo '[INFO] 2 dependencies'
+
+      echo [COMMAND] npm install --save-prod hypothetical-package-0@latest
+      hypothetical-package-1@latest
+
+      npm install --save-prod hypothetical-package-0@latest
+      hypothetical-package-1@latest
+
+      echo \\"[STATUS] $?\\"
+
+
+      echo '[INFO] 2 optionalDependencies'
+
+      echo [COMMAND] npm install --save-optional hypothetical-package-4@latest
+      hypothetical-package-5@latest
+
+      npm install --save-optional hypothetical-package-4@latest
+      hypothetical-package-5@latest
+
+      echo \\"[STATUS] $?\\"
+
+
+      echo '[INFO] 2 devDependencies'
+
+      echo [COMMAND] npm install --save-dev hypothetical-package-2@latest
+      hypothetical-package-3@latest
+
+      npm install --save-dev hypothetical-package-2@latest
+      hypothetical-package-3@latest
+
+      echo \\"[STATUS] $?\\"
+
+    stderr: ((Empty))
+- case:
+    program: {}
+    tag:
+      NPM_TAG: latest
+  result:
+    status: 0
+    signal: null
+    error: null
+    stdout: >+
+      echo '[INFO] 2 dependencies'
+
+      echo [COMMAND] npm install --save-prod hypothetical-package-0@latest
+      hypothetical-package-1@latest
+
+      npm install --save-prod hypothetical-package-0@latest
+      hypothetical-package-1@latest
+
+      echo \\"[STATUS] $?\\"
+
+
+      echo '[INFO] 2 optionalDependencies'
+
+      echo [COMMAND] npm install --save-optional hypothetical-package-4@latest
+      hypothetical-package-5@latest
+
+      npm install --save-optional hypothetical-package-4@latest
+      hypothetical-package-5@latest
+
+      echo \\"[STATUS] $?\\"
+
+
+      echo '[INFO] 2 devDependencies'
+
+      echo [COMMAND] npm install --save-dev hypothetical-package-2@latest
+      hypothetical-package-3@latest
+
+      npm install --save-dev hypothetical-package-2@latest
+      hypothetical-package-3@latest
+
+      echo \\"[STATUS] $?\\"
+
+    stderr: ((Empty))
+- case:
+    program:
+      USE_YARN: 'true'
+    tag: {}
+  result:
+    status: 0
+    signal: null
+    error: null
+    stdout: >+
+      echo '[INFO] 2 dependencies'
+
+      echo [COMMAND] yarn add  hypothetical-package-0 hypothetical-package-1
+
+      yarn add  hypothetical-package-0 hypothetical-package-1
+
+      echo \\"[STATUS] $?\\"
+
+
+      echo '[INFO] 2 optionalDependencies'
+
+      echo [COMMAND] yarn add --optional hypothetical-package-4
+      hypothetical-package-5
+
+      yarn add --optional hypothetical-package-4 hypothetical-package-5
+
+      echo \\"[STATUS] $?\\"
+
+
+      echo '[INFO] 2 devDependencies'
+
+      echo [COMMAND] yarn add --dev hypothetical-package-2
+      hypothetical-package-3
+
+      yarn add --dev hypothetical-package-2 hypothetical-package-3
+
+      echo \\"[STATUS] $?\\"
+
+    stderr: ((Empty))
+- case:
+    program:
+      USE_YARN: 'true'
+    tag:
+      TAG: latest
+  result:
+    status: 0
+    signal: null
+    error: null
+    stdout: >+
+      echo '[INFO] 2 dependencies'
+
+      echo [COMMAND] yarn add  hypothetical-package-0@latest
+      hypothetical-package-1@latest
+
+      yarn add  hypothetical-package-0@latest hypothetical-package-1@latest
+
+      echo \\"[STATUS] $?\\"
+
+
+      echo '[INFO] 2 optionalDependencies'
+
+      echo [COMMAND] yarn add --optional hypothetical-package-4@latest
+      hypothetical-package-5@latest
+
+      yarn add --optional hypothetical-package-4@latest
+      hypothetical-package-5@latest
+
+      echo \\"[STATUS] $?\\"
+
+
+      echo '[INFO] 2 devDependencies'
+
+      echo [COMMAND] yarn add --dev hypothetical-package-2@latest
+      hypothetical-package-3@latest
+
+      yarn add --dev hypothetical-package-2@latest hypothetical-package-3@latest
+
+      echo \\"[STATUS] $?\\"
+
+    stderr: ((Empty))
+- case:
+    program:
+      USE_YARN: 'true'
+    tag:
+      NPM_TAG: latest
+  result:
+    status: 0
+    signal: null
+    error: null
+    stdout: >+
+      echo '[INFO] 2 dependencies'
+
+      echo [COMMAND] yarn add  hypothetical-package-0@latest
+      hypothetical-package-1@latest
+
+      yarn add  hypothetical-package-0@latest hypothetical-package-1@latest
+
+      echo \\"[STATUS] $?\\"
+
+
+      echo '[INFO] 2 optionalDependencies'
+
+      echo [COMMAND] yarn add --optional hypothetical-package-4@latest
+      hypothetical-package-5@latest
+
+      yarn add --optional hypothetical-package-4@latest
+      hypothetical-package-5@latest
+
+      echo \\"[STATUS] $?\\"
+
+
+      echo '[INFO] 2 devDependencies'
+
+      echo [COMMAND] yarn add --dev hypothetical-package-2@latest
+      hypothetical-package-3@latest
+
+      yarn add --dev hypothetical-package-2@latest hypothetical-package-3@latest
+
+      echo \\"[STATUS] $?\\"
+
+    stderr: ((Empty))
+- case:
+    program:
+      USE_PNPM: 'true'
+    tag: {}
+  result:
+    status: 0
+    signal: null
+    error: null
+    stdout: >+
+      echo '[INFO] 2 dependencies'
+
+      echo [COMMAND] pnpm install --save-prod hypothetical-package-0
+      hypothetical-package-1
+
+      pnpm install --save-prod hypothetical-package-0 hypothetical-package-1
+
+      echo \\"[STATUS] $?\\"
+
+
+      echo '[INFO] 2 optionalDependencies'
+
+      echo [COMMAND] pnpm install --save-optional hypothetical-package-4
+      hypothetical-package-5
+
+      pnpm install --save-optional hypothetical-package-4 hypothetical-package-5
+
+      echo \\"[STATUS] $?\\"
+
+
+      echo '[INFO] 2 devDependencies'
+
+      echo [COMMAND] pnpm install --save-dev hypothetical-package-2
+      hypothetical-package-3
+
+      pnpm install --save-dev hypothetical-package-2 hypothetical-package-3
+
+      echo \\"[STATUS] $?\\"
+
+    stderr: ((Empty))
+- case:
+    program:
+      USE_PNPM: 'true'
+    tag:
+      TAG: latest
+  result:
+    status: 0
+    signal: null
+    error: null
+    stdout: >+
+      echo '[INFO] 2 dependencies'
+
+      echo [COMMAND] pnpm install --save-prod hypothetical-package-0@latest
+      hypothetical-package-1@latest
+
+      pnpm install --save-prod hypothetical-package-0@latest
+      hypothetical-package-1@latest
+
+      echo \\"[STATUS] $?\\"
+
+
+      echo '[INFO] 2 optionalDependencies'
+
+      echo [COMMAND] pnpm install --save-optional hypothetical-package-4@latest
+      hypothetical-package-5@latest
+
+      pnpm install --save-optional hypothetical-package-4@latest
+      hypothetical-package-5@latest
+
+      echo \\"[STATUS] $?\\"
+
+
+      echo '[INFO] 2 devDependencies'
+
+      echo [COMMAND] pnpm install --save-dev hypothetical-package-2@latest
+      hypothetical-package-3@latest
+
+      pnpm install --save-dev hypothetical-package-2@latest
+      hypothetical-package-3@latest
+
+      echo \\"[STATUS] $?\\"
+
+    stderr: ((Empty))
+- case:
+    program:
+      USE_PNPM: 'true'
+    tag:
+      NPM_TAG: latest
+  result:
+    status: 0
+    signal: null
+    error: null
+    stdout: >+
+      echo '[INFO] 2 dependencies'
+
+      echo [COMMAND] pnpm install --save-prod hypothetical-package-0@latest
+      hypothetical-package-1@latest
+
+      pnpm install --save-prod hypothetical-package-0@latest
+      hypothetical-package-1@latest
+
+      echo \\"[STATUS] $?\\"
+
+
+      echo '[INFO] 2 optionalDependencies'
+
+      echo [COMMAND] pnpm install --save-optional hypothetical-package-4@latest
+      hypothetical-package-5@latest
+
+      pnpm install --save-optional hypothetical-package-4@latest
+      hypothetical-package-5@latest
+
+      echo \\"[STATUS] $?\\"
+
+
+      echo '[INFO] 2 devDependencies'
+
+      echo [COMMAND] pnpm install --save-dev hypothetical-package-2@latest
+      hypothetical-package-3@latest
+
+      pnpm install --save-dev hypothetical-package-2@latest
+      hypothetical-package-3@latest
+
+      echo \\"[STATUS] $?\\"
+
+    stderr: ((Empty))
+
+"
+`;

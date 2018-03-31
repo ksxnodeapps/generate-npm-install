@@ -1,0 +1,15 @@
+{
+  "version": "0.0.0",
+  "dependencies": {
+    "hypothetical-package-0": "^1.2.3",
+    "hypothetical-package-1": "^4.5.6"
+  },
+  "devDependencies": {
+    "hypothetical-package-2": "^1.2.3",
+    "hypothetical-package-3": "^4.5.6"
+  },
+  "optionalDependencies": {
+    "hypothetical-package-4": "^1.2.3",
+    "hypothetical-package-5": "^4.5.6"
+  }
+}

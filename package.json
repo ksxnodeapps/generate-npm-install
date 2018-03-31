@@ -9,7 +9,11 @@
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "preferGlobal": true,
   "devDependencies": {
-    "standard": "^10.0.2"
+    "@types/js-yaml": "^3.10.1",
+    "jest": "^22.4.3",
+    "js-yaml": "^3.11.0",
+    "standard": "^10.0.2",
+    "x-iterable": "^6.0.1"
   },
   "engines": {
     "node": ">= 9.0.0"
@@ -37,5 +41,10 @@
   "bugs": {
     "url": "https://github.com/ksxnodeapps/generate-npm-install/issues"
   },
-  "homepage": "https://github.com/ksxnodeapps/generate-npm-install#readme"
+  "homepage": "https://github.com/ksxnodeapps/generate-npm-install#readme",
+  "standard": {
+    "env": {
+      "jest": true
+    }
+  }
 }

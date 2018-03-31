@@ -8,4 +8,6 @@
     cat stdout.tmp
     exit 2
   )
+) && (
+  jest --coverage
 )

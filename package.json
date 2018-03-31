@@ -9,10 +9,10 @@
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "preferGlobal": true,
   "devDependencies": {
-    "@types/js-yaml": "^3.10.1",
+    "@types/js-yaml": "^3.11.1",
     "jest": "^22.4.3",
     "js-yaml": "^3.11.0",
-    "standard": "^10.0.2",
+    "standard": "^11.0.1",
     "x-iterable": "^6.0.1"
   },
   "engines": {

@@ -71,7 +71,7 @@ function main ({
     .map(([command, name, count]) => [
       `echo '[INFO] ${count} ${name}'`,
       'echo [COMMAND] ' + command,
-      `cd '${wdir}' && ${command}`,
+      command,
       'echo "[STATUS] $?"',
       '\n'
     ])
